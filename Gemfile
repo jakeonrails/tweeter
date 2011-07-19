@@ -12,6 +12,8 @@ group :development do
   gem "nifty-generators"
 end
 
+gem "gravatar_image_tag"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

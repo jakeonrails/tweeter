@@ -73,3 +73,11 @@ a {
 .error_messages ul {
   margin: 0;
 }
+
+.even {
+  background-color: #e2ffe2;
+}
+
+.odd {
+  background-color: #e2e2e2;
+}

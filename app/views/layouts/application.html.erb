@@ -9,6 +9,18 @@
   </head>
   <body>
     <div id="container">
+      <h1>Tweeter</h1>
+      <p>
+        <% if user_signed_in? %>
+          Logged in as <%= current_user.email %> |
+          <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %>
+          for Tweeter, or
+          <%= link_to "Sign in", new_user_session_path %>          
+        <% end %>
+      </p>
+
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>

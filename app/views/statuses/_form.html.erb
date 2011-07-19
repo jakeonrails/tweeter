@@ -1,0 +1,11 @@
+<%= error_messages_for @status %>
+
+<%= form_for @status do |f| %>
+  <p>
+    <%= f.label "Update your status:" %>
+    <%= f.text_field :body %>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+

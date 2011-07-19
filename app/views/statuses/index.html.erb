@@ -1,0 +1,18 @@
+<% title("Status Updates", true) %>
+
+<% if user_signed_in? %>
+  <%= render 'form' %>
+<% else %>
+  <p><%= link_to "Log in", new_user_session_path %> to update your status</p>
+<% end %>
+
+<% @statuses.each do |status| %>
+  <%= div_for status, :class => cycle('even','odd') do %>
+    <p>
+      <%= gravatar_image_tag status.user.email, :gravatar => { :size => 64 } %>
+      <b><%= status.user.user_name %>:</b>
+      <%= status.body %>
+      <i><small><%= time_ago_in_words status.created_at %> ago</small></i>
+    </p>
+  <% end %>
+<% end %>
