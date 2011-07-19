@@ -8,6 +8,9 @@ gem 'rails', '3.0.9'
 gem 'sqlite3'
 
 gem 'devise'
+group :development do
+  gem "nifty-generators"
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'
